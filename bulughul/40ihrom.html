@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bulughul Maram</title>
+
+<script>
+
+	function onLoad(){
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+	function onDeviceReady(){
+		// Page
+		localStorage.pageID = 1;
+		
+		// Back Button
+		document.addEventListener("backbutton", onBackKeyDown, false);
+	}
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="onLoad()" data-state="1" >
+
+<div id="header">
+
+<div id="headbox"><h2><strong>BULUGHUL MARAM</strong></h2>
+</div>
+</div>
+
+<div id="home">
+
+<ul id="homemenu">
+
+ 
+ <div align="center" style="padding-left:4px; padding-right:4px; color:#000">
+ 
+ <center>
+ <br>
+ <h3> Tentang Wajib Ihram dan Sifatnya </h3>
+ <hr color="#006600">
+<!--** isi content ** -->
+
+<p dir="ltr" align="center"><strong>HADITS KE-550</strong></p>
+<p dir="ltr" align="center"> </p>
+<p dir="rtl" align="justify"><SPAN lang="AR-SA">عَنْ عَائِشَةَ رَضِيَ اَللَّهُ عَنْهَا قَالَتْ: ( خَرَجْنَا مَعَ   اَلنَّبِيِّ صلى الله عليه وسلم عَامَ حَجَّةِ اَلْوَدَاعِ, فَمِنَّا مَنْ أَهَلَّ   بِعُمْرَةٍ, وَمِنَّا مَنْ أَهَلَّ بِحَجٍّ وَعُمْرَةٍ, وَمِنَّا مَنْ أَهَلَّ   بِحَجٍّ, وَأَهَلَّ رَسُولُ اَللَّهِ صلى الله عليه وسلم بِالْحَجِّ, فَأَمَّا مَنْ   أَهَلَّ بِعُمْرَةٍ فَحَلَّ, وَأَمَّا مَنْ أَهَلَّ بِحَجٍّ, أَوْ جَمَعَ اَلْحَجَّ   وَالْعُمْرَةَ فَلَمْ يَحِلُّوا حَتَّى كَانَ يَوْمَ اَلنَّحْرِ )  مُتَّفَقٌ   عَلَيْهِ  </SPAN></p>
+<p align="justify">Aisyah Radliyallaahu   'anhu berkata: Kami keluar bersama Rasulullah Shallallaahu 'alaihi wa Sallam   pada tahun haji wada'. Di antara kami ada yang berihram untuk umrah, ada yang   berihram untuk haji dan umrah, dan ada yang berihram untuk haji. Sedang   Rasulullah Shallallaahu 'alaihi wa Sallam berihram untuk haji. Bagi yang   berihram untuk umrah, ia boleh menanggalkan ihramnya (tahallul) sewaktu datang   (ke kota Mekkah). Adapun bagi yang berihram untuk haji atau menggabungkan antara   haji dan umrah, ia tidak boleh menanggalkan ihramnya sampai pada hari raya   Kurban. Muttafaq Alaihi.</p>
+<hr color="#006600">
+<p>&nbsp;</p>
+<!--** isi content ** -->
+
+
+</div>
+ </div>
+ 
+
+<div id="single" style="display:none;">
+
+</div>
+     
+       
+<div id="goback" style="display:none;" ><div class="navigasi"><img src="images/icon-home.png" /></div></div>
+
+
+
+<script>
+
+	$('#homemenu li').click(function(){
+		var hal = $(this).attr('data-hal');
+		
+		$.ajax({url: hal,
+			success: function(data){
+				$("#home").hide();
+				$("#isi").html(data);
+				$("#single").show();
+				$("#goback").show();
+				$("#exit").show();
+				$('body').attr('data-state', '2');
+			}
+		});
+	});
+	
+	$('#goback').click(function(){
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+	});
+	
+	// Back Button
+	function onBackKeyDown(){
+		var dstate = $('body').attr('data-state');
+				
+		if(dstate == '2'){
+			$('body').attr('data-state', '1');
+			$("#single").hide();
+			$("#goback").hide();
+			$("#exit").hide();
+			$("#home").show();			
+		}
+		
+		if(dstate == '1'){
+			exitAppPopup();
+		}
+    }
+	
+	// Exit
+	function exitAppPopup(){
+        navigator.notification.confirm(
+            'Tutup aplikasi?'
+            , function(button){
+                  if(button == 2) {
+                      navigator.app.exitApp();
+                  }
+              }
+            , 'Keluar'
+            , 'Batal,Ya'
+        );  
+        return false;
+    }
+
+	$('body').hammer().on("tap", ".backbtn", function(event){
+		
+		$("html, body").animate({ scrollTop: 0 }, "fast");
+		
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+		
+		$('body').attr('data-state', '1');
+		
+	});
+
+</script>
+  <center>  <div class="footer"><a href="index.html"><img src="images/icon-home.png" /> </a></div></center>    
+</body>
+</html>
+	

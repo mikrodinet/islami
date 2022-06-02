@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bulughul Maram</title>
+
+<script>
+
+	function onLoad(){
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+	function onDeviceReady(){
+		// Page
+		localStorage.pageID = 1;
+		
+		// Back Button
+		document.addEventListener("backbutton", onBackKeyDown, false);
+	}
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="onLoad()" data-state="1" >
+
+<div id="header">
+
+<div id="headbox"><h2><strong>BULUGHUL MARAM</strong></h2>
+</div>
+</div>
+
+<div id="home">
+
+<ul id="homemenu">
+
+ 
+ <div align="center" style="padding-left:4px; padding-right:4px; color:#000">
+ 
+ <center>
+ <br>
+ <h3> Tentang Rujuk </h3>
+ <hr color="#006600">
+<!--** isi content ** -->
+
+<p dir="ltr" align="center"><strong>HADITS KE-888</strong></p>
+<p dir="ltr" align="center"> </p>
+<p dir="rtl" align="justify"><SPAN lang="AR-SA">عَنْ عِمْرَانَ بْنِ حُصَيْنٍ رَضِيَ اَللَّهُ عَنْهُمَا; ( أَنَّهُ   سُئِلَ عَنْ اَلرَّجُلِ يُطَلِّقُ, ثُمَّ يُرَاجِعُ, وَلَا يُشْهِدُ? فَقَالَ:   أَشْهِدْ عَلَى طَلَاقِهَا, وَعَلَى رَجْعَتِهَا )  . رَوَاهُ أَبُو دَاوُدَ   هَكَذَا مَوْقُوفًا, وَسَنَدُهُ صَحِيحٌ .</SPAN></p>
+<p dir="rtl" align="justify"><SPAN lang="ar-eg">وَأَخْرَجَهُ   الْبَيْهَقِيُّ بِلَفْظِ أَنَّ عِمْرَابْنَ حُصَيْنٍ رَضِى اللهُ عَنْهُ سُئِلَ   عَمَّنْ رَاجَعَ امْرَأَتَهُ وَلَمْ يُشْهِدْ فَقَالَ : فِى غَيْرِ سُنَّةٍ   فَلْيُشْهِدِ اْلآنَ. وَزَادَ الطَّبْرَانِيُّ فِى رِوَايَةٍ : وَيَسْتَغْفِرِ   اللهَ</SPAN></p>
+<p align="justify">Imran Ibnu Hushoin   Radliyallaahu 'anhu pernah ditanya tentang orang yang bercerai kemudian rujuk   lagi tanpa menghadirkan saksi. Ia berkata: Hadirkanlah saksi untuk mentalaknya   dan merujuknya. Riwayat Abu Dawud secara mauquf dan sanadnya shahih. </p>
+<p align="justify">Baihaqi meriwayatkan dengan lafadz:   Bahwa Imran Ibnu Hushoin Radliyallaahu 'anhu ditanya tentang seseorang yang   merujuk istrinya dan tidak menghadirkan saksi. Ia berkata: Itu tidak mengikuti   sunnah, hendaknya ia menghadirkan saksi sekarang. Thabrani menambahkan dalam   suatu riwayat: Dan memohon ampunan Allah. </p>
+<p>&nbsp;</p>
+<p dir="ltr" align="center"><strong>HADITS KE-889</strong></p>
+<p dir="ltr" align="center"> </p>
+<p dir="rtl" align="justify"><SPAN lang="AR-SA">وَعَنِ اِبْنِ عُمَرَ, ( أَنَّهُ لَمَّا طَلَّقَ   اِمْرَأَتَهُ، قَالَ اَلنَّبِيُّ صلى الله عليه وسلم لِعُمَرَ: مُرْهُ   فَلْيُرَاجِعْهَا )  مُتَّفَقٌ عَلَيْه </SPAN></p>
+<p align="justify">Dari Ibnu Umar   Radliyallaahu 'anhu bahwa ketika ia menceraikan istrinya Nabi Shallallaahu   'alaihi wa Sallam bersabda kepada Umar: "Perintahkanlah dia agar merujuknya   kembali." Muttafaq Alaihi. </p>
+<hr color="#006600">
+<p>&nbsp;</p>
+<!--** isi content ** -->
+
+
+</div>
+ </div>
+ 
+
+<div id="single" style="display:none;">
+
+</div>
+     
+       
+<div id="goback" style="display:none;" ><div class="navigasi"><img src="images/icon-home.png" /></div></div>
+
+
+
+<script>
+
+	$('#homemenu li').click(function(){
+		var hal = $(this).attr('data-hal');
+		
+		$.ajax({url: hal,
+			success: function(data){
+				$("#home").hide();
+				$("#isi").html(data);
+				$("#single").show();
+				$("#goback").show();
+				$("#exit").show();
+				$('body').attr('data-state', '2');
+			}
+		});
+	});
+	
+	$('#goback').click(function(){
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+	});
+	
+	// Back Button
+	function onBackKeyDown(){
+		var dstate = $('body').attr('data-state');
+				
+		if(dstate == '2'){
+			$('body').attr('data-state', '1');
+			$("#single").hide();
+			$("#goback").hide();
+			$("#exit").hide();
+			$("#home").show();			
+		}
+		
+		if(dstate == '1'){
+			exitAppPopup();
+		}
+    }
+	
+	// Exit
+	function exitAppPopup(){
+        navigator.notification.confirm(
+            'Tutup aplikasi?'
+            , function(button){
+                  if(button == 2) {
+                      navigator.app.exitApp();
+                  }
+              }
+            , 'Keluar'
+            , 'Batal,Ya'
+        );  
+        return false;
+    }
+
+	$('body').hammer().on("tap", ".backbtn", function(event){
+		
+		$("html, body").animate({ scrollTop: 0 }, "fast");
+		
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+		
+		$('body').attr('data-state', '1');
+		
+	});
+
+</script>
+  <center>  <div class="footer"><a href="index.html"><img src="images/icon-home.png" /> </a></div></center>    
+</body>
+</html>
+	

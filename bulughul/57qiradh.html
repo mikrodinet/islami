@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bulughul Maram</title>
+
+<script>
+
+	function onLoad(){
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+	function onDeviceReady(){
+		// Page
+		localStorage.pageID = 1;
+		
+		// Back Button
+		document.addEventListener("backbutton", onBackKeyDown, false);
+	}
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="onLoad()" data-state="1" >
+
+<div id="header">
+
+<div id="headbox"><h2><strong>BULUGHUL MARAM</strong></h2>
+</div>
+</div>
+
+<div id="home">
+
+<ul id="homemenu">
+
+ 
+ <div align="center" style="padding-left:4px; padding-right:4px; color:#000">
+ 
+ <center>
+ <br>
+ <h3> Tentang Qiradh </h3>
+ <hr color="#006600">
+<!--** isi content ** -->
+
+<p dir="ltr" align="center"><strong>HADITS KE-721</strong></p>
+<p dir="ltr" align="center"> </p>
+<p dir="rtl" align="justify"><SPAN lang="AR-SA">عَنْ صُهَيْبٍ رضي الله عنه أَنَّ اَلنَّبِيَّ صلى الله عليه وسلم   قَالَ: ( ثَلَاثٌ فِيهِنَّ اَلْبَرَكَةُ: اَلْبَيْعُ إِلَى أَجَلٍ،   وَالْمُقَارَضَةُ، وَخَلْطُ اَلْبُرِّ بِالشَّعِيرِ لِلْبَيْتِ, لَا لِلْبَيْعِ )    رَوَاهُ اِبْنُ مَاجَهْ بِإِسْنَادٍ ضَعِيفٍ</SPAN></p>
+<p align="justify">Dari Shuhaib   Radliyallaahu 'anhu bahwa Nabi Shallallaahu 'alaihi wa Sallam bersabda: "Tiga   hal yang didalamnya ada berkah adalah jual-beli bertempo, ber-qiradl (memberikan   modal kepada seseorang hasil dibagi dua), dan mencampur gandum dengan sya'ir   untuk makanan di rumah, bukan untuk dijual." Riwayat Ibnu Majah dengan sanad   lemah. </p>
+<p>&nbsp;</p>
+<p dir="ltr" align="center"><strong>HADITS KE-722</strong></p>
+<p dir="ltr" align="center"> </p>
+<p dir="rtl" align="justify"><SPAN lang="AR-SA">وَعَنْ حَكِيمِ بْنِ حِزَامٍ رضي الله عنه ( أَنَّهُ كَانَ يَشْتَرِطُ   عَلَى اَلرَّجُلِ إِذَا أَعْطَاهُ مَالًا مُقَارَضَةً: أَنْ لَا تَجْعَلَ مَالِي   فِي كَبِدٍ رَطْبَةٍ, وَلَا تَحْمِلَهُ فِي بَحْرٍ, وَلَا تَنْزِلَ بِهِ فِي بَطْنِ   مَسِيلٍ, فَإِنْ فَعَلْتَ شَيْئًا مِنْ ذَلِكَ فَقَدَ ضَمِنْتَ مَالِي )  رَوَاهُ   اَلدَّارَقُطْنِيُّ, وَرِجَالُهُ ثِقَاتٌ. وَقَالَ مَالِكٌ فِي اَلْمُوَطَّأِ عَنْ   اَلْعَلَاءِ بْنِ عَبْدِ اَلرَّحْمَنِ بْنِ يَعْقُوبَ, عَنْ أَبِيهِ, عَنْ جَدِّهِ:   ( أَنَّهُ عَمِلَ فِي مَالٍ لِعُثْمَانَ عَلَى أَنَّ اَلرِّبْحَ بَيْنَهُمَا )    وَهُوَ مَوْقُوفٌ صَحِيحٌ</SPAN></p>
+<p align="justify">Dari Hakim Ibnu Hizam   bahwa disyaratkan bagi seseorang yang memberikan modal sebagai qiradl, yaitu:   Jangan menggunakan modalku untuk barang yang bernyawa, jangan membawanya ke   laut, dan jangan membawanya di tengah air yang mengalir. Jika engkau melakukan   salah satu di antaranya, maka engkaulah yang menanggung modalku. Riwayat   Daruquthni dengan perawi-perawi yang dapat dipercaya. Malik berkata dalam   kitabnya al-Muwattho', dari Ala' Ibnu Abdurrahman Ibnu Ya'qub, dari ayahnya,   dari kakeknya: Bahwa ia pernah menjalankan modal Utsman dengan keuntungan dibagi   dua. Hadits mauquf shahih. </p>
+<hr color="#006600">
+<p>&nbsp;</p>
+<!--** isi content ** -->
+
+
+</div>
+ </div>
+ 
+
+<div id="single" style="display:none;">
+
+</div>
+     
+       
+<div id="goback" style="display:none;" ><div class="navigasi"><img src="images/icon-home.png" /></div></div>
+
+
+
+<script>
+
+	$('#homemenu li').click(function(){
+		var hal = $(this).attr('data-hal');
+		
+		$.ajax({url: hal,
+			success: function(data){
+				$("#home").hide();
+				$("#isi").html(data);
+				$("#single").show();
+				$("#goback").show();
+				$("#exit").show();
+				$('body').attr('data-state', '2');
+			}
+		});
+	});
+	
+	$('#goback').click(function(){
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+	});
+	
+	// Back Button
+	function onBackKeyDown(){
+		var dstate = $('body').attr('data-state');
+				
+		if(dstate == '2'){
+			$('body').attr('data-state', '1');
+			$("#single").hide();
+			$("#goback").hide();
+			$("#exit").hide();
+			$("#home").show();			
+		}
+		
+		if(dstate == '1'){
+			exitAppPopup();
+		}
+    }
+	
+	// Exit
+	function exitAppPopup(){
+        navigator.notification.confirm(
+            'Tutup aplikasi?'
+            , function(button){
+                  if(button == 2) {
+                      navigator.app.exitApp();
+                  }
+              }
+            , 'Keluar'
+            , 'Batal,Ya'
+        );  
+        return false;
+    }
+
+	$('body').hammer().on("tap", ".backbtn", function(event){
+		
+		$("html, body").animate({ scrollTop: 0 }, "fast");
+		
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+		
+		$('body').attr('data-state', '1');
+		
+	});
+
+</script>
+  <center>  <div class="footer"><a href="index.html"><img src="images/icon-home.png" /> </a></div></center>    
+</body>
+</html>
+	
