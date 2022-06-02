@@ -1,0 +1,221 @@
+@charset "utf-8";
+/* CSS Document */
+h1,h2,h3,body { margin: 0px; padding: 0px;}
+ul, ol{	list-style-type: none;}
+body,html {
+	font-family: KFGQPC Uthman Taha Naskh Bold, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #000;
+
+}
+
+@font-face {
+    font-family: KFGQPC Uthman Taha Naskh Bold;
+    src: url("file:///android_asset/jurumiyah/font.ttf")
+}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+}
+#isi ul, #isi ol {
+	margin-left: 20px;
+	list-style-type: square;
+	margin-bottom: 10px;
+}
+#isi li {
+	margin-left: 20px;
+	list-style-type: square;
+}
+
+h3 a:link, h3 a:active, h3 a:visited,h3 a {
+	color: #000000;
+	display: block;
+	height: 30px;
+}
+#header h2 a:link, #header h2 a:active, #header h2 a:visited, #header h2 a {
+	display:block;
+	color: #000000;
+}
+
+h1 { margin-bottom: 15px; }
+img {max-width: 100%}
+#header {
+	display:none;
+}
+#headbox {
+display:none;
+}
+#headbox h2 {
+	color: #000000;
+
+}
+#footer {
+	display:none;
+}
+#footerbox {
+display:none;
+}
+#footerbox p {
+	color: #D9C191;
+	text-align: center;
+
+}
+#gohome{
+	float: left;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+	margin-top: 7px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 7px;
+}
+.imgfloat { float: left; margin-right: 10px; }
+
+@media only screen and (min-width: 500px) {
+  #homemenu li { float: left; width: 50%; }
+}
+#homemenu li{
+margin: 0px;
+padding: 0px;
+display:block;
+
+}
+.kotakmenu {
+	padding: 5px;
+	height: 35px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	background-color: #FFFFF0;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: ##FFFFF0;
+	border-left-color: #FFB09C;
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-image: url(images/arrowli.png);
+	margin-bottom: 3px;
+}
+.imgthumb {
+	margin-bottom: 6px;
+	border: 1px solid #FFFFFF;
+	height: 32px;
+	width: 32px;
+}
+#home {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+
+}
+#home h3{
+	padding-top: 5px;
+}
+
+#single {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+#isi {
+	padding:5px;
+	background-color: ##000000;
+	border: 1px solid #FFB09C;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	text-align: justify;
+}
+#isi h2{
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.kosong{
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+}
+@media only screen and (min-width: 500px) {
+  .alignimg { 	float: right;
+	padding-left: 5px;
+ }
+}
+.alignimg{
+	display: block;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+}
+
+.kardus{
+	text-align:center;
+	width:100%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	clear: both;
+}
+.navigasi{
+display:none;
+}
+p{
+	text-align:justify;
+	margin:0;
+	padding-top: 10;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+
+.desc{	font-size: 12px;}
+.meta {
+	padding: 2px;
+	text-align:center;
+	margin-top: 4px;
+	color: #999;
+	font-size: 10px;
+}
+
+
+#simple {
+    margin: 4px;
+    padding: 4px;
+
+}
+
+#simple li {
+    background: #D3D3D3;
+    border-bottom: 7px solid #fff;
+    list-style: none;
+    padding: 0.5em;
+    text-align: center;
+
+}
+
+#simple li:hover {
+    background: #808080;
+}
+
+#simple li a {
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+
+
+h2, h3 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;
+                            text-align: center;    border-style: solid;  background-color: #F8ECE0;
+                             border-bottom: solid 5px #DF7401;     border-top: solid 5px #DF7401;  border-left: 0px;     border-right: 0px;     border-radius: 0px;     line-height: 1;     font-family: "sans;georgia;arial" }
+
