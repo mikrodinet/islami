@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1,h2,h3,ul,body { margin: 0px; padding: 0px;}
+body,html {
+	font-family: KFGQPC Uthman Taha Naskh Bold, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #FFF;
+	background-attachment: fixed;
+	background-color:#FFF;
+	/*background-image: url(images/bgtile.png); */
+	background-repeat: repeat;
+}
+
+{ padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;
+                                                              text-align: center;    border-style: solid;  background-color: #F8ECE0;
+                                                               border-bottom: solid 5px #DF7401;     border-top: solid 5px #DF7401;  border-left: 0px;     border-right: 0px;     border-radius: 0px;     line-height: 1;     font-family: "sans;georgia;arial" }
+
+
+                                                  li {
+                                                      list-style-image: url('cek.png');
+                                                          text-align:left;
+                                                               padding-left:5px;
+                                                  }
+
+                                                         #tb {
+                                                         	 width: 100%;
+                                                         	text-align: center;
+                                                         }
+
+                                                         img {max-width: 100%}
+
+                                                         .container {
+                                                         	position: relative;
+                                                           	text-align: center;
+                                                           	color: white;
+                                                         	}
+
+                                                         .image {
+                                                           opacity: 1;
+                                                           display: block;
+                                                           width: 100%;
+                                                           height: auto;
+                                                           transition: .5s ease;
+                                                           backface-visibility: hidden;
+                                                         }
+
+                                                         .container:active .image {
+                                                           opacity: 0.3;
+                                                         }
+
+                                                         .centered {
+                                                           position: absolute;
+                                                           top: 50%;
+                                                           left: 50%;
+                                                           transform: translate(-50%, -50%);
+                                                         color: black;
+                                                         }
+
+
+
+@font-face {
+    font-family: KFGQPC Uthman Taha Naskh Bold;
+    src: url("file:///android_asset/js/font.ttf")
+}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color:#000000;
+	font-weight: bold;
+}
+ul { list-style: none; }
+h3 a:link, h3 a:active, h3 a:visited,h3 a {
+	color: #fff;
+}
+#header h2 a:link, #header h2 a:active, #header h2 a:visited, #header h2 a {
+	display:block;
+	color: #fff;
+}
+
+h1 { margin-bottom: 15px; }
+img {max-width: 100%}
+#header {
+	display:none;
+}
+#headbox {
+	display:none;
+}
+#headbox h3 { display:none;}
+.logo{
+	float: left;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+	margin-top: 7px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 7px;
+}
+.imgfloat { float: left; margin-right: 10px; }
+.kotakmenu {
+	padding: 5px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+
+	height: 50px;
+	background-color:#CCCCCC;
+	background-image: url(images/arrowli.png);
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	border-top-style: solid;
+
+}
+@media only screen and (min-width: 500px) {
+  #homemenu li { float: left; width: 50%; }
+}
+.homemenu li{
+	display:block;
+	height: 32px;
+}
+.imgthumb {
+	margin-bottom: 6px;
+	border: 1px solid #fff;
+	height: 32px;
+	width: 32px;
+}
+#home {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+
+}
+#home h2{
+	background-color: #999;
+	display: block;
+	padding: 5px;
+	margin-bottom: 5px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #C30;
+	color: #333;
+}
+
+
+#single {
+	padding-top: 55px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+#isi {
+	padding:5px;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+}
+#isi h2{
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+
+.kosong{
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+}
+.aligncenter{
+	display: block;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+}
+.alignleft{
+	float: left; margin-right: 4px;
+}
+.alignright{	float: right;margin-left: 4px}
+
+.kardus{
+	text-align:center;
+	width:100%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	clear: both;
+}
+.navigasi{
+	text-align:center;
+	width:100%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	clear: both;
+}
+p{text-align:justify;margin:0;padding:0 0 10px}
+.meta{	font-size: 11px;}
+
+
+.footer{
+	display:none;
+}
