@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,html {
+	font-family: KFGQPC Uthman Taha Naskh Bold, sans-serif, Arial, Helvetica;
+	font-size: x-large;
+	color: #000000;
+	widht: 100%;
+	text-align:justify;
+}
+
+@font-face {
+    font-family: KFGQPC Uthman Taha Naskh Bold;
+    src: url("file:///android_asset/font.ttf")
+
+}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+}
+
+h2 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;
+                                      text-align: center;    border-style: solid;  background-color: #F8ECE0;
+                                       border-bottom: solid 5px #DF7401;     border-top: solid 5px #DF7401;  border-left: 0px;     border-right: 0px;     border-radius: 0px;     line-height: 1;     font-family: "sans;georgia;arial" }
+
+
+                          li {
+                              list-style-image: url('cek.png');
+                                  text-align:left;
+                                       padding-left:5px;
+                          }
+
+                                 #tb {
+                                 	 width: 100%;
+                                 	text-align: center;
+                                 }
+
+                                 img {max-width: 100%}
+
+                                 .container {
+                                 	position: relative;
+                                   	text-align: center;
+                                   	color: white;
+                                 	}
+
+                                 .image {
+                                   opacity: 1;
+                                   display: block;
+                                   width: 100%;
+                                   height: auto;
+                                   transition: .5s ease;
+                                   backface-visibility: hidden;
+                                 }
+
+                                 .container:active .image {
+                                   opacity: 0.3;
+                                 }
+
+                                 .centered {
+                                   position: absolute;
+                                   top: 50%;
+                                   left: 50%;
+                                   transform: translate(-50%, -50%);
+                                 color: black;
+                                 }
