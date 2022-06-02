@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1,h2,h3,body { margin: 0px; padding: 0px;}
+body,html {
+	font-family:  KFGQPC Uthman Taha Naskh Bold, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #000;
+	text-align: center;
+padding: 5px;
+}
+
+@font-face {
+    font-family: KFGQPC Uthman Taha Naskh Bold;
+    src: url("file:///android_asset/imriti/font.ttf")
+}
+
+
+/* css list with numeber circle background -------------- */
+
+ol {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 19px Arial, Sans, Lato;
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+ol ol {
+    margin: 0 0 0 2em;
+}
+
+.rectangle-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #F7F2E0;
+    color: #000;
+    text-decoration: none;
+
+}
+
+.rectangle-list a:hover{
+    background: #BDBDBD;
+}
+
+.rectangle-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #f9b42d;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangle-list a:after{
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+
+}
+
+.rectangle-list a:hover:after{
+    left: -.5em;
+    border-left-color: #f9b42d;
+}
+
+
+
+/* End css list with numeber circle background -------------- */
+
+
+
+
+ img.menu {
+    float:left;
+    margin-top: 13px;
+	margin-left: 10px;
+	margin-right: 17px;
+	height: 25px;
+	width: 25px;	
+ 	}
+	 
+img.ic{
+	float:right;
+    margin-top: 17px;
+	margin-left: 10px;
+	margin-right: 17px;
+	height: 17px;
+	width: 4px;}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+ul { list-style: none; }
+h3 a:link, h3 a:active, h3 a:visited,h3 a {
+	/*warna tulisan di baris menu*/
+	color: #000;
+	display: block;
+}
+#header h2 a:link, #header h2 a:active, #header h2 a:visited, #header h2 a {
+	display:block;
+	color: #fff;
+}
+
+h1 { margin-bottom: 15px; }
+img {max-width: 100%}
+#header {
+	display:none;
+	
+		 
+}
+#headbox {
+	display:none;
+}
+#headbox h2 { color: #000; padding-top: 4px; }
+#footer {
+	display:none;
+}
+#footerbox {
+display:none;
+}
+#footerbox p {
+	color: #666;
+	text-align: center;
+
+}
+.logo{
+	float: left;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+	margin-top: 7px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 7px;
+
+}
+.imgfloat { float: left; margin-right: 10px; }
+.kotakmenu {
+	padding: 5px;
+	background-repeat: no-repeat;
+	background-position: right center;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #400000;
+	border-left-color: #D59855;
+	height: 32px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	/*warna hijau di kotak menu*/
+	background-color: #D59855;
+	/*gambar di ujung sebelah kiri di kotak menu*/
+	background-image:none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+}
+@media only screen and (min-width: 500px) {
+  #homemenu li { float: left; width: 100%; }
+}
+.homemenu li{
+	display:block;
+	height: 32px;
+}
+.imgthumb {
+	margin-bottom: 6px;
+	border: 1px solid #fff;
+	height: 32px;
+	width: 32px;
+}
+#home {
+	padding: 5px;
+
+}
+#home h2{
+	background-color: #000;
+	display: block;
+	padding: 5px;
+	margin-bottom: 5px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000;
+	color: #333;
+}
+
+#single {
+	padding: 5px;
+}
+
+#isi {
+	padding:5px;
+	background-color: #fff;
+	border: 1px solid #fff;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+}
+#isi h2{
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+
+.kosong{
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+}
+.aligncenter{
+	display: block;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+}
+.alignleft{
+	float: left; margin-right: 4px;
+}
+.alignright{	float: right;margin-left: 4px}
+
+.kardus{
+	text-align:center;
+	width:100%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	clear: both;
+}
+.navigasi{
+	display:none;
+}
+p{text-align:center;margin:0;padding:0 0 10px}
+.desc{	font-size: 11px;}
+
+h2, h3 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;
+                         text-align: center;    border-style: solid;  background-color: #F8ECE0;
+                          border-bottom: solid 5px #DF7401;     border-top: solid 5px #DF7401;  border-left: 0px;     border-right: 0px;     border-radius: 0px;     line-height: 1;     font-family: "sans;georgia;arial" }
+
+
+             li {
+                 list-style-image: url('cek.png');
+                     text-align:left;
+                          padding-left:5px;
+             }
+
+                    #tb {
+                    	 width: 100%;
+                    	text-align: center;
+                    }
+
+                    img {max-width: 100%}
+
+                    .container {
+                    	position: relative;
+                      	text-align: center;
+                      	color: white;
+                    	}
+
+                    .image {
+                      opacity: 1;
+                      display: block;
+                      width: 100%;
+                      height: auto;
+                      transition: .5s ease;
+                      backface-visibility: hidden;
+                    }
+
+                    .container:active .image {
+                      opacity: 0.3;
+                    }
+
+                    .centered {
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    color: black;
+                    }
