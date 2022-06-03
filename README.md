@@ -20,8 +20,11 @@
 
 صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ
 
-Islam adalah menjalankan syari'at junjungan kita Gusti Nabi Muhammad saw dengan anggauta dzahir (anggaauta badan).
+Islam adalah menjalankan syari’at junjungan kita Gusti Nabi Muhammad saw dengan anggauta dzahir (anggaauta badan).kita, dengan cara mengikuti apa yang dijalankannya dan menta’ati apa yang diperintahkannya.Dan Iman adalah kepercayan hati kita pada apa yang telah difirmankan Allah swt kepada Gusti Nabi Muhammad saw (kalamullah) dan yang disabdakan oleh Gusti Nabi Muhammad saw sendiri (hadits).
 
+Barang siapa yang telah bersifat Islam, maka ia dinamakan muslim, dan siapa yang yang bersifat Iman, maka ia dinamai orang m’umin. Dan sesungguhnya islam dan iman itu tidak dapat dipisahkan.
+
+[Baca Artikel Islami di ALHIKMAH.MY.ID](https://www.alhikmah.my.id)
 
 [ Iqro' ] Pelajaran Islami dari beberapa kitab Islami yang Termuat dalam Kitab - Kitab Kuning Berikut ini.
 
