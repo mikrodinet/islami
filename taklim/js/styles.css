@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,html {
+	font-family: Arial, Open Sans, sans-serif, Arial, Helvetica;
+	font-size: 18px;
+	color: #000000;
+	widht: 100%;
+}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+h3 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;
+                  text-align: center;    border-style: solid;  background-color: #F8ECE0;
+                   border-bottom: solid 5px #DF7401;     border-top: solid 5px #DF7401;  border-left: 0px;     border-right: 0px;     border-radius: 0px;     line-height: 1;     font-family: "sans;georgia;arial" }
+
+
+      li {
+          list-style-image: url('cek.png');
+              text-align:left;
+                   padding-left:5px;
+      }
+
+             #tb {
+             	 width: 100%;
+             	text-align: center;
+             }
+
+             img {max-width: 100%}
+
+             .container {
+             	position: relative;
+               	text-align: center;
+               	color: white;
+             	}
+
+             .image {
+               opacity: 1;
+               display: block;
+               width: 100%;
+               height: auto;
+               transition: .5s ease;
+               backface-visibility: hidden;
+             }
+
+             .container:active .image {
+               opacity: 0.3;
+             }
+
+             .centered {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+             color: black;
+             }
+
+
+@font-face {
+    font-family: KFGQPC Uthman Taha Naskh Bold;
+    src: url("file:///android_asset/taklim/js/font.ttf")
+}
+
+.arab {
+    font-family: KFGQPC Uthman Taha Naskh Bold;
+    text-align: left;
+
+}
+
+/* css list with numeber circle background -------------- */
+
+ol {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 19px Arial, Sans, Lato;
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+ol ol {
+    margin: 0 0 0 2em;
+}
+
+.rectangle-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #F7F2E0;
+    color: #000;
+    text-decoration: none;
+
+}
+
+.rectangle-list a:hover{
+    background: #BDBDBD;
+}
+
+.rectangle-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #f9b42d;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangle-list a:after{
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+
+}
+
+.rectangle-list a:hover:after{
+    left: -.5em;
+    border-left-color: #f9b42d;
+}
+
+
+
+/* End css list with numeber circle background -------------- */
