@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--320-->
+		<title>Kitab Jurumiyah dan terjemahan lengkap</title>
+
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+
+			<h2>'Athof</h2>
+
+		
+		<div id="home">
+
+<div align="justify">
+			<center>
+
+			 
+				<h3 style="font-size:19px; margin-bottom:0px;"><u>بَابُ اَلْعَطْفِ</u></h3>
+				
+	    </center>
+			<!--** isi content ** -->
+			<br>
+          <div align="right">
+            <strong>وَحُرُوفُ اَلْعَطْفِ عَشَرَةٌ </strong>وَهِيَ <br>
+              اَلْوَاوُ, وَالْفَاءُ, وَثُمَّ, وَأَوْ, وَأَمْ,  وَإِمَّا, وَبَلْ, وَلَا, وَلَكِنْ, وَحَتَّى فِي بَعْضِ اَلْمَوَاضِعِ
+            <br>
+            <br>
+            فَإِنْ عُطِفَتْ عَلَى   مَرْفُوعٍ رُفِعَتْ  أَوْ عَلَى مَنْصُوبٍ نُصِبَتْ, أَوْ عَلَى  مَخْفُوضٍ   خُفِضَتْ, أَوْ عَلَى مَجْزُومٍ جُزِمَتْ, تَقُولُ "قَامَ زَيْدٌ    وَعَمْرٌو, وَرَأَيْتُ زَيْدًا وَعَمْرًا, وَمَرَرْتُ بِزَيْدٍ وَعَمْرٍو,    وَزَيْدٌ لَمْ يَقُمْ وَلَمْ يَقْعُدْ".
+          </div>
+<!--** isi content ** -->
+<br><hr><br/>
+<center>
+  <h3><strong>'Athof</strong></h3></center>
+<strong>Huruf ‘athaf ada sepuluh, yaitu</strong><br><br/>
+اَلْوَاوُ, وَالْفَاءُ, وَثُمَّ, وَأَوْ, وَأَمْ, وَإِمَّا, وَبَلْ, وَلَا, وَلَكِنْ, وَحَتَّى فِي بَعْضِ اَلْمَوَاضِعِ<br><br/>
+Waw, fa, tsumma, aw, am, imma, bal, la, laakin, dan hatta.<br>
+<br>
+Jika kamu athafkan dalam keadaan rafa’ maka rafa’akan, dalam keadan   nashab maka nashabkan, dalam keadaan khafad maka khafadhkan, dalam   keadaan jazm maka jazmkan.<br>
+<br>
+<em> Contohnya</em><br><br/>
+"قَامَ زَيْدٌ وَعَمْرٌو, وَرَأَيْتُ زَيْدًا وَعَمْرًا, وَمَرَرْتُ بِزَيْدٍ وَعَمْرٍو, وَزَيْدٌ لَمْ يَقُمْ وَلَمْ يَقْعُدْ
+<script>
+
+			$('#homemenu li').click(function(){
+				var hal = $(this).attr('data-hal');
+				
+				$.ajax({url: hal,
+					success: function(data){
+						$("#home").hide();
+						$("#isi").html(data);
+						$("#single").show();
+						$("#goback").show();
+						$("#exit").show();
+						$('body').attr('data-state', '2');
+					}
+				});
+			});
+			
+			$('#goback').click(function(){
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+			});
+			
+			// Back Button
+			function onBackKeyDown(){
+				var dstate = $('body').attr('data-state');
+						
+				if(dstate == '2'){
+					$('body').attr('data-state', '1');
+					$("#single").hide();
+					$("#goback").hide();
+					$("#exit").hide();
+					$("#home").show();			
+				}
+				
+				if(dstate == '1'){
+					exitAppPopup();
+				}
+			}
+			
+			// Exit
+			function exitAppPopup(){
+				navigator.notification.confirm(
+					'Tutup aplikasi?'
+					, function(button){
+						  if(button == 2) {
+							  navigator.app.exitApp();
+						  }
+					  }
+					, 'Keluar'
+					, 'Batal,Ya'
+				);  
+				return false;
+			}
+
+			$('body').hammer().on("tap", ".backbtn", function(event){
+				
+				$("html, body").animate({ scrollTop: 0 }, "fast");
+				
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+				
+				$('body').attr('data-state', '1');
+				
+			});
+		</script>
+</body>
+</html>

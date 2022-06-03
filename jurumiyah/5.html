@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--320-->
+		<title>Kitab Jurumiyah dan terjemahan lengkap</title>
+
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+
+			<h2>Fi'il</h2>
+
+		
+		<div id="home">
+
+<div align="justify">
+			<center>
+
+			 
+				<h3 style="font-size:19px; margin-bottom:0px;"><u>بَابُ اَلْأَفْعَالِ</u></h3>
+				
+	    </center>
+			<!--** isi content ** -->
+			<br>
+          <div align="right"><strong>اَلْأَفْعَالُ ثَلَاثَةٌ </strong>: ماض وَمُضَارِعٌ,  وَأَمْرٌ, نَحْوَ ضَرَبَ, وَيَضْرِبُ, وَاضْرِبْ. <br>
+            <strong><br>
+            فَالْمَاضِي </strong>مَفْتُوحُ  اَلْآخِرِ أَبَدًا. <strong><br>
+            <br>
+            وَالْأَمْرُ </strong>: مجزوم أَبَدًا. <br>
+            <strong><br>
+            والمضارع </strong>مَا كَانَ فِي أَوَّلِهِ  إِحْدَى   اَلزَّوَائِدِ اَلْأَرْبَعِ اَلَّتِي يَجْمَعُهَا قَوْلُكَ  "أَنَيْتُ"   وَهُوَ مَرْفُوعٌ أَبَدًا, حَتَّى يَدْخُلَ عَلَيْهِ نَاصِبٌ  أَوْ   جَازِمٌ.  <br>
+            <strong><br>
+            فالنواصب عَشَرَةٌ, وَهِيَ </strong><br>
+أَنْ, وَلَنْ, وَإِذَنْ, وَكَيْ, وَلَامُ كَيْ,  وَلَامُ اَلْجُحُودِ, وَحَتَّى, وَالْجَوَابُ بِالْفَاءِ, وَالْوَاوِ, وَأَوْ. <br>
+<strong><br>
+وَالْجَوَازِمُ ثَمَانِيَةَ عَشَرَ وَهِيَ </strong><br>
+لَمْ, وَلَمَّا, وَأَلَمْ, وَأَلَمَّا, وَلَامُ  اَلْأَمْرِ   وَالدُّعَاءِ, وَ "لَا" فِي اَلنَّهْيِ وَالدُّعَاءِ, وَإِنْ  وَمَا وَمَنْ   وَمَهْمَا, وَإِذْمَا ، وأي وَمَتَى, وَأَيْنَ وَأَيَّانَ, وَأَنَّى,    وَحَيْثُمَا, وَكَيْفَمَا, وَإِذًا فِي اَلشِّعْرِ خاصة.</div>
+<!--** isi content ** -->
+<br><hr><br/>
+<center>
+  <h3><strong>Bab tentang Fi’il-fi’il</strong></h3></center>
+<strong>Fi’il itu ada tiga</strong><br><br/>
+  1.	Fiil Madhi<br>
+  2.	Fiil Mudhari’<br>
+  3.	Fiil Amr 
+<em><br>
+<br>
+Contohnya</em> ضَرَبَ(madhi), (mudhari’) , وَيَضْرِبُ (amr’), وَاضْرِبْ<br><br>
+Maka Fiil Madhi itu difathahkan selamanya dan fiil amar dijazamkan   selamanya dan fiil mudhari’ itu fiil yang di awalnya terdapat salah satu   dari huruf tambahan yang empat yang terkumpul dalam perkataan anaytu   (alif, nun, ya, dan ta). Fiil mudhari’ itu dirafa’kan selamanya kecuali   adaa amil nashab atau jazm yang masuk padanya. </p>
+<br>
+Maka amil nashab (huruf yang menashabkan) itu ada sepuluh, yaitu:<br>
+  <br>
+  أَنْ, وَلَنْ, وَإِذَنْ, وَكَيْ, وَلَامُ كَيْ, وَلَامُ اَلْجُحُودِ, وَحَتَّى, وَالْجَوَابُ بِالْفَاءِ, وَالْوَاوِ, وَأَوْ.<br>
+  <br>
+  Dan amil jazm itu ada delapan belas, yaitu:<br>
+  <br>
+  لَمْ, وَلَمَّا, وَأَلَمْ, وَأَلَمَّا, وَلَامُ اَلْأَمْرِ وَالدُّعَاءِ,   وَ "لَا" فِي اَلنَّهْيِ وَالدُّعَاءِ, وَإِنْ وَمَا وَمَنْ وَمَهْمَا,   وَإِذْمَا ، وأي وَمَتَى, وَأَيْنَ وَأَيَّانَ, وَأَنَّى, وَحَيْثُمَا,   وَكَيْفَمَا, وَإِذًا فِي اَلشِّعْرِ خاصة. (dan idzan pada syair   tertentu)
+  <script>
+
+			$('#homemenu li').click(function(){
+				var hal = $(this).attr('data-hal');
+				
+				$.ajax({url: hal,
+					success: function(data){
+						$("#home").hide();
+						$("#isi").html(data);
+						$("#single").show();
+						$("#goback").show();
+						$("#exit").show();
+						$('body').attr('data-state', '2');
+					}
+				});
+			});
+			
+			$('#goback').click(function(){
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+			});
+			
+			// Back Button
+			function onBackKeyDown(){
+				var dstate = $('body').attr('data-state');
+						
+				if(dstate == '2'){
+					$('body').attr('data-state', '1');
+					$("#single").hide();
+					$("#goback").hide();
+					$("#exit").hide();
+					$("#home").show();			
+				}
+				
+				if(dstate == '1'){
+					exitAppPopup();
+				}
+			}
+			
+			// Exit
+			function exitAppPopup(){
+				navigator.notification.confirm(
+					'Tutup aplikasi?'
+					, function(button){
+						  if(button == 2) {
+							  navigator.app.exitApp();
+						  }
+					  }
+					, 'Keluar'
+					, 'Batal,Ya'
+				);  
+				return false;
+			}
+
+			$('body').hammer().on("tap", ".backbtn", function(event){
+				
+				$("html, body").animate({ scrollTop: 0 }, "fast");
+				
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+				
+				$('body').attr('data-state', '1');
+				
+			});
+		</script>
+</body>
+</html>

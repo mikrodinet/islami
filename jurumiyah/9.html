@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--320-->
+        <title>Kitab Jurumiyah dan terjemahan lengkap</title>
+
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+            <h2>Na'at (Sifat)</h2>
+
+		
+		<div id="home">
+
+<div align="justify">
+			<center>
+
+			 
+				<h3 style="font-size:19px; margin-bottom:0px;"><u>بَابُ اَلنَّعْتِ</u></h3>
+				
+	    </center>
+			<!--** isi content ** -->
+			<br>
+          <div align="right"><strong>اَلنَّعْتُ </strong>تَابِعٌ لِلْمَنْعُوتِ فِي  رَفْعِهِ   وَنَصْبِهِ وَخَفْضِهِ, وَتَعْرِيفِهِ وَتَنْكِيرِهِ; تَقُولُ قَامَ    زَيْدٌ اَلْعَاقِلُ, وَرَأَيْتُ زَيْدًا اَلْعَاقِلَ, وَمَرَرْتُ بِزَيْدٍ    اَلْعَاقِلِ. <br>
+            <strong><br>
+            وَالْمَعْرِفَةُ خَمْسَةُ أَشْيَاءَ </strong>اَلِاسْمُ   اَلْمُضْمَرُ  نَحْوَ أَنَا وَأَنْتَ, وَالِاسْمُ اَلْعَلَمُ نَحْوَ زَيْدٍ   وَمَكَّةَ,  وَالِاسْمُ اَلْمُبْهَمُ نَحْوَ هَذَا, وَهَذِهِ,   وَهَؤُلَاءِ, وَالِاسْمُ  اَلَّذِي فِيهِ اَلْأَلِفُ وَاللَّامُ نَحْوَ   اَلرَّجُلُ وَالْغُلَامُ, وَمَا  أُضِيفَ إِلَى وَاحِدٍ مِنْ هَذِهِ   اَلْأَرْبَعَةِ. <br>
+          <strong><br>
+          وَالنَّكِرَةُ </strong>كُلُّ اِسْمٍ شَائِعٍ فِي  جِنْسِهِ   لَا يَخْتَصُّ بِهِ وَاحِدٌ دُونَ آخَرَ, وَتَقْرِيبُهُ كُلُّ مَا صَلَحَ    دُخُولُ اَلْأَلِفِ وَاللَّامِ عَلَيْهِ, نَحْوُ اَلرَّجُلِ والفرس.</div>
+<!--** isi content ** -->
+<br><hr><br/>
+<center>
+  <h3><strong>Na'at (Sifat)</strong></h3></center>
+<strong>Na’at</strong> itu mengikuti yang disifati pada keadaan rafa’nya, nashabnya, khafadhnya, ma’rifatnya, dan nakirahnya. <br/><br>
+Contohnya: <br><br/>
+  قَامَ زَيْدٌ اَلْعَاقِلُ, وَرَأَيْتُ زَيْدًا اَلْعَاقِلَ, وَمَرَرْتُ بِزَيْدٍ اَلْعَاقِلِ. <br>
+  <br>
+  <strong>Ma’rifat (kata khusus)</strong> itu ada lima:<br>
+  <br>
+
+  1. Isim Dhamir (kata ganti), <br>
+  contohnya : أَنَا وَأَنْتَ 
+  <br>
+  <br>
+  2. Isim Alam (nama), contohnya: زَيْدٍ وَمَكَّةَ
+<br>
+  <br>
+  3. Isim Mubham (kata tunjuk), contohnya: هَذَا, وَهَذِهِ, وَهَؤُلَاءِ
+<br>
+  <br>
+  4.Isim yang terdapat alif lam (al), contohnya :
+
+اَلرَّجُلُ وَالْغُلَامُ<br>
+  <br>
+  5. apa-apa yang diidhafahkan kepada salah satu dari ini yang empat.
+
+  <br>
+  <br>
+  <strong>  Nakirah (kata umum)</strong> adalah setiap isim yang tersebar (beraneka ragam)   pada jenisnya ,tidak tertentu pada sesuatupun. <br><br/>
+  Dan untuk memudahkannya,   nakirah itu adalah setiap yang dapat menerima   alif lam, contohnya:  اَلرَّجُلُ وَالْغُلَامُ 
+</p>
+<script>
+
+			$('#homemenu li').click(function(){
+				var hal = $(this).attr('data-hal');
+				
+				$.ajax({url: hal,
+					success: function(data){
+						$("#home").hide();
+						$("#isi").html(data);
+						$("#single").show();
+						$("#goback").show();
+						$("#exit").show();
+						$('body').attr('data-state', '2');
+					}
+				});
+			});
+			
+			$('#goback').click(function(){
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+			});
+			
+			// Back Button
+			function onBackKeyDown(){
+				var dstate = $('body').attr('data-state');
+						
+				if(dstate == '2'){
+					$('body').attr('data-state', '1');
+					$("#single").hide();
+					$("#goback").hide();
+					$("#exit").hide();
+					$("#home").show();			
+				}
+				
+				if(dstate == '1'){
+					exitAppPopup();
+				}
+			}
+			
+			// Exit
+			function exitAppPopup(){
+				navigator.notification.confirm(
+					'Tutup aplikasi?'
+					, function(button){
+						  if(button == 2) {
+							  navigator.app.exitApp();
+						  }
+					  }
+					, 'Keluar'
+					, 'Batal,Ya'
+				);  
+				return false;
+			}
+
+			$('body').hammer().on("tap", ".backbtn", function(event){
+				
+				$("html, body").animate({ scrollTop: 0 }, "fast");
+				
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+				
+				$('body').attr('data-state', '1');
+				
+			});
+		</script>
+</body>
+</html>

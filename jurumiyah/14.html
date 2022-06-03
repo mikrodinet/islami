@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--320-->
+        <title>Kitab Jurumiyah dan terjemahan lengkap</title>
+
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+            <h2>Maf'ul Bih</h2>
+
+		
+		<div id="home">
+
+<div align="justify">
+			<center>
+
+			 
+				<h3 style="font-size:19px; margin-bottom:0px;"><u>بَابُ اَلْمَفْعُولِ بِهِ</u></h3>
+				
+	    </center>
+			<!--** isi content ** -->
+			<br>
+          <div align="right"><strong>وَهُوَ </strong>اَلِاسْمُ اَلْمَنْصُوبُ,  اَلَّذِي يَقَعُ بِهِ اَلْفِعْلُ, نَحْوَ ضَرَبْتُ زَيْدًا, وَرَكِبْتُ اَلْفَرَسَ <br>
+            <strong><br>
+            وَهُوَ قِسْمَانِ </strong>ظَاهِرٌ, وَمُضْمَرٌ <br>
+            <strong><br>
+            فَالظَّاهِرُ </strong>مَا تَقَدَّمَ ذِكْرُهُ <br>
+            <strong><br>
+            وَالْمُضْمَرُ قِسْمَانِ </strong>مُتَّصِلٌ, وَمُنْفَصِلٌ <br>
+            <strong><br>
+            فَالْمُتَّصِلُ اِثْنَا عَشَرَ, وَهِيَ </strong>ضَرَبَنِي,   وَضَرَبَنَا,  وَضَرَبَكَ, وَضَرَبَكِ, وَضَرَبَكُمَا, وَضَرَبَكُمْ,   وَضَرَبَكُنَّ, وَضَرَبَهُ,  وَضَرَبَهَا, وَضَرَبَهُمَا, وَضَرَبَهُمْ,   وَضَرَبَهُنَّ <br>
+          <strong><br>
+          وَالْمُنْفَصِلُ اِثْنَا عَشَرَ, وَهِيَ </strong>إِيَّايَ,   وَإِيَّانَا, وَإِيَّاكَ,  وَإِيَّاكِ, وَإِيَّاكُمَا, وَإِيَّاكُمْ,   وَإِيَّاكُنَّ, وَإِيَّاهُ,  وَإِيَّاهَا, وَإِيَّاهُمَا, وَإِيَّاهُمْ,   وَإِيَّاهُنَّ.</div>
+<!--** isi content ** -->
+<br><hr><br/>
+Maf’ul bih adalah isim yang dinashabkan yang dikenakan padanya suatu perbuatan. Contohnya :<br><br/>
+  ضَرَبْتُ زَيْدًا, وَرَكِبْتُ اَلْفَرَسَ 
+  <br>
+  <br>
+  Maf’ul bih itu ada dua bagian, yaitu maf’ul bih dzhahir dan maf’ul bih dhamir.<br>
+  <br>
+  <em>Maf’ul bih dzhahir</em> telah dijelaskan sebelumnya (pada bab-bab yang menjelaskan tentang dzhahir).<br>
+  <br>
+  Sedangkan <em>maf’ul bih dhamir</em> itu terbagi menjadi dua:<br>
+  <br>
+  1. Muttashil (bersambung)<br>
+  Maf’ul bih dhamir muttashil ada dua belas, yaitu :<br><br/>
+  ضَرَبَنِي, وَضَرَبَنَا, وَضَرَبَكَ, وَضَرَبَكِ, وَضَرَبَكُمَا,   وَضَرَبَكُمْ, وَضَرَبَكُنَّ, وَضَرَبَهُ, وَضَرَبَهَا, وَضَرَبَهُمَا,   وَضَرَبَهُمْ, وَضَرَبَهُنَّ
+  <br>
+  <br>
+  2. Munfashil (terpisah)<br>
+  Maf’ul bih dhamir munfashil ada dua belas, yaitu:<br><br/>
+  إِيَّايَ, وَإِيَّانَا, وَإِيَّاكَ, وَإِيَّاكِ, وَإِيَّاكُمَا,   وَإِيَّاكُمْ, وَإِيَّاكُنَّ, وَإِيَّاهُ, وَإِيَّاهَا, وَإِيَّاهُمَا,   وَإِيَّاهُمْ, وَإِيَّاهُنَّ.
+<br>
+
+<script>
+
+			$('#homemenu li').click(function(){
+				var hal = $(this).attr('data-hal');
+				
+				$.ajax({url: hal,
+					success: function(data){
+						$("#home").hide();
+						$("#isi").html(data);
+						$("#single").show();
+						$("#goback").show();
+						$("#exit").show();
+						$('body').attr('data-state', '2');
+					}
+				});
+			});
+			
+			$('#goback').click(function(){
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+			});
+			
+			// Back Button
+			function onBackKeyDown(){
+				var dstate = $('body').attr('data-state');
+						
+				if(dstate == '2'){
+					$('body').attr('data-state', '1');
+					$("#single").hide();
+					$("#goback").hide();
+					$("#exit").hide();
+					$("#home").show();			
+				}
+				
+				if(dstate == '1'){
+					exitAppPopup();
+				}
+			}
+			
+			// Exit
+			function exitAppPopup(){
+				navigator.notification.confirm(
+					'Tutup aplikasi?'
+					, function(button){
+						  if(button == 2) {
+							  navigator.app.exitApp();
+						  }
+					  }
+					, 'Keluar'
+					, 'Batal,Ya'
+				);  
+				return false;
+			}
+
+			$('body').hammer().on("tap", ".backbtn", function(event){
+				
+				$("html, body").animate({ scrollTop: 0 }, "fast");
+				
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+				
+				$('body').attr('data-state', '1');
+				
+			});
+		</script>
+</body>
+</html>

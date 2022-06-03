@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--320-->
+		<title>Kitab Jurumiyah dan terjemahan lengkap</title>
+
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+
+			<h2>Munada (Yg Dipanggil)</h2>
+
+		
+		<div id="home">
+
+<div align="justify">
+			<center>
+
+			 
+				<h3 style="font-size:19px; margin-bottom:0px;"><u> بَابُ اَلْمُنَادَى</u></h3>
+				
+	    </center>
+			<!--** isi content ** -->
+			<br>
+          <div align="right"><strong>اَلْمُنَادَى خَمْسَةُ أَنْوَاعٍ </strong>: المفرد اَلْعَلَمُ,    وَالنَّكِرَةُ اَلْمَقْصُودَةُ, وَالنَّكِرَةُ غَيْرُ اَلْمَقْصُودَةِ,    وَالْمُضَافُ, وَالشَّبِيهُ بِالْمُضَافِ <br>
+            <br>
+            فَأَمَّا اَلْمُفْرَدُ اَلْعَلَمُ وَالنَّكِرَةُ  اَلْمَقْصُودَةُ   فَيُبْنَيَانِ عَلَى اَلضَّمِّ مِنْ غَيْرِ تَنْوِينٍ, نَحْوَ  "يَا   زَيْدُ" وَ"يَا رَجُلُ" <br>
+            <br>
+    وَالثَّلَاثَةُ اَلْبَاقِيَةُ مَنْصُوبَةٌ لَا  غَيْرُ.</div>
+<!--** isi content ** -->
+<br><hr><br/>
+Munada itu ada lima, yaitu<br><br/>
+.1المفرد اَلْعَلَمُ,(nama-nama)<br>
+.2 وَالنَّكِرَةُ اَلْمَقْصُودَةُ,(nakirah yang termaksud)<br>
+.3 وَالنَّكِرَةُ غَيْرُ اَلْمَقْصُودَةِ,(nakirah yang tidak termaksud)<br>
+.4 وَالْمُضَافُ,(yang diidhafahkan)<br>
+.5 وَالشَّبِيهُ بِالْمُضَافِ (yang menyerupai mudhaf)<br>
+<br>
+Adapun mufrad ‘alam dan nakirah maqsudah maka ia dimabnikan atas dhammah dengan tanpa tanwin.<br><br/>
+contohnya: يَا زَيْدُ وَيَا رَجُلُ <br>
+<br>
+Dan tiga munada sisanya itu tidak lain dinashabkan.
+<script>
+
+			$('#homemenu li').click(function(){
+				var hal = $(this).attr('data-hal');
+				
+				$.ajax({url: hal,
+					success: function(data){
+						$("#home").hide();
+						$("#isi").html(data);
+						$("#single").show();
+						$("#goback").show();
+						$("#exit").show();
+						$('body').attr('data-state', '2');
+					}
+				});
+			});
+			
+			$('#goback').click(function(){
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+			});
+			
+			// Back Button
+			function onBackKeyDown(){
+				var dstate = $('body').attr('data-state');
+						
+				if(dstate == '2'){
+					$('body').attr('data-state', '1');
+					$("#single").hide();
+					$("#goback").hide();
+					$("#exit").hide();
+					$("#home").show();			
+				}
+				
+				if(dstate == '1'){
+					exitAppPopup();
+				}
+			}
+			
+			// Exit
+			function exitAppPopup(){
+				navigator.notification.confirm(
+					'Tutup aplikasi?'
+					, function(button){
+						  if(button == 2) {
+							  navigator.app.exitApp();
+						  }
+					  }
+					, 'Keluar'
+					, 'Batal,Ya'
+				);  
+				return false;
+			}
+
+			$('body').hammer().on("tap", ".backbtn", function(event){
+				
+				$("html, body").animate({ scrollTop: 0 }, "fast");
+				
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+				
+				$('body').attr('data-state', '1');
+				
+			});
+		</script>
+</body>
+</html>

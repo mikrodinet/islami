@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--320-->
+		<title>Kitab Jurumiyah dan terjemahan lengkap</title>
+
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+
+			<h2>Isim Yg Dirofa'kan</h2>
+
+		
+		<div id="home">
+
+<div align="justify">
+			<center>
+
+			 
+				<h3 style="font-size:19px; margin-bottom:0px;"><u>بَابُ مَرْفُوعَاتِ اَلْأَسْمَاءِ</u></h3>
+				
+	    </center>
+			<!--** isi content ** -->
+			<br>
+          <div align="right"><strong>اَلْمَرْفُوعَاتُ سَبْعَةٌ </strong>وَهِيَ <br>
+اَلْفَاعِلُ, وَالْمَفْعُولُ اَلَّذِي لَمْ  يُسَمَّ فَاعِلُهُ,   وَالْمُبْتَدَأُ, وَخَبَرُهُ, وَاسْمُ "كَانَ"  وَأَخَوَاتِهَا, وَخَبَرُ   "إِنَّ" وَأَخَوَاتِهَا, وَالتَّابِعُ  لِلْمَرْفُوعِ, وَهُوَ أَرْبَعَةُ   أَشْيَاءَ اَلنَّعْتُ, وَالْعَطْفُ,  وَالتَّوْكِيدُ, وَالْبَدَلُ</div>
+<!--** isi content ** -->
+<br><hr><br/>
+<center>
+  <h3><strong>Isim-Isim Yang Dirofa'kan</strong></h3></center>
+<strong>Isim-isim yang dirafa’kan itu ada tujuh</strong><br><br/>
+1.	Isim Faa’il<br>
+2.	Isim Maf’ul yang tidak disebut failnya (naaibul fa’il)<br>
+3.	Mubtada <br>
+4.	khabar mubtada<br>
+5.	Isim Kaana dan saudara-saudaranya<br>
+6.	khabar inna dan saudara-saudaranya<br>
+7.	Dan yang mengikuti yang dirafa’kan,  yaitu ada empat : Na’at, ‘athaf, taukid, dan badal
+<script>
+
+			$('#homemenu li').click(function(){
+				var hal = $(this).attr('data-hal');
+				
+				$.ajax({url: hal,
+					success: function(data){
+						$("#home").hide();
+						$("#isi").html(data);
+						$("#single").show();
+						$("#goback").show();
+						$("#exit").show();
+						$('body').attr('data-state', '2');
+					}
+				});
+			});
+			
+			$('#goback').click(function(){
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+			});
+			
+			// Back Button
+			function onBackKeyDown(){
+				var dstate = $('body').attr('data-state');
+						
+				if(dstate == '2'){
+					$('body').attr('data-state', '1');
+					$("#single").hide();
+					$("#goback").hide();
+					$("#exit").hide();
+					$("#home").show();			
+				}
+				
+				if(dstate == '1'){
+					exitAppPopup();
+				}
+			}
+			
+			// Exit
+			function exitAppPopup(){
+				navigator.notification.confirm(
+					'Tutup aplikasi?'
+					, function(button){
+						  if(button == 2) {
+							  navigator.app.exitApp();
+						  }
+					  }
+					, 'Keluar'
+					, 'Batal,Ya'
+				);  
+				return false;
+			}
+
+			$('body').hammer().on("tap", ".backbtn", function(event){
+				
+				$("html, body").animate({ scrollTop: 0 }, "fast");
+				
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+				
+				$('body').attr('data-state', '1');
+				
+			});
+		</script>
+</body>
+</html>

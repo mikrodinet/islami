@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1"> <!--320-->
+		<title>Kitab Jurumiyah dan terjemahan lengkap</title>
+
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+
+			<h2>Laa</h2>
+
+		
+		<div id="home">
+
+<div align="justify">
+			<center>
+
+			 
+				<h3 style="font-size:19px; margin-bottom:0px;"><u>بَابُ لَا</u></h3>
+				
+	    </center>
+			<!--** isi content ** -->
+			<br>
+          <div align="right">اِعْلَمْ أَنَّ "لَا" تَنْصِبُ  اَلنَّكِرَاتِ بِغَيْرِ تَنْوِينٍ إِذَا   بَاشَرَتْ اَلنَّكِرَةَ وَلَمْ  تَتَكَرَّرْ "لَا" نَحْوَ "لَا رَجُلَ فِي   اَلدَّارِ" <br>
+            <br>
+            فَإِنْ لَمْ تُبَاشِرْهَا وَجَبَ اَلرَّفْعُ  وَوَجَبَ تَكْرَارُ "لَا" نَحْوَ لَا فِي اَلدَّارِ رَجُلٌ وَلَا اِمْرَأَةٌ" <br>
+            <br>
+    فَإِنْ تَكَرَّرَتْ "لَا" جَازَ  إِعْمَالُهَا وَإِلْغَاؤُهَا,   فَإِنْ شِئْتَ قُلْتُ "لَا رَجُلَ فِي  اَلدَّارِ وَلَا اِمْرَأَةَ".    <br>
+    <br>
+    فَإِنْ  شِئْتَ قُلْتُ "لَا رَجُلٌ فِي اَلدَّارِ وَلَا اِمْرَأَةٌ".</div>
+<!--** isi content ** -->
+<br><hr><br/>
+Ketahuilah! Bahwa apabila laa bertemu langsung dengan isim nakirah maka   laa menashabkan isim nakirah dengan tanpa tanwin dan tidak   mengulang-ulang laa. <br><br/>
+Contohnya : لَا رَجُلَ فِي اَلدَّارِ<br>
+<br>
+Jika laa tidak bertemu langsung dengan nakirah maka wajib mengulang-ulang laa. <br><br/>
+ Contohnya : لَا فِي اَلدَّارِ رَجُلٌ وَلَا اِمْرَأَةٌ<br>
+ <br>
+ Jika mengulang-ulang laa (berarti bertemu langsung dengan   nakirah), maka boleh mengamalkannya (menjadikan laa sebagai amil yang   menashabkan) atau menyia-nyiakannya. <br>
+ <br>
+ Maka jika kamu suka, kamu katakan :   لَا رَجُلَ فِي اَلدَّارِ وَلَا اِمْرَأَةَ <br>
+ <br>
+ Dan jika kamu suka, kamu katakan:<br><br/>
+لَا رَجُلٌ فِي اَلدَّارِ وَلَا اِمْرَأَةٌ".
+<script>
+
+			$('#homemenu li').click(function(){
+				var hal = $(this).attr('data-hal');
+				
+				$.ajax({url: hal,
+					success: function(data){
+						$("#home").hide();
+						$("#isi").html(data);
+						$("#single").show();
+						$("#goback").show();
+						$("#exit").show();
+						$('body').attr('data-state', '2');
+					}
+				});
+			});
+			
+			$('#goback').click(function(){
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+			});
+			
+			// Back Button
+			function onBackKeyDown(){
+				var dstate = $('body').attr('data-state');
+						
+				if(dstate == '2'){
+					$('body').attr('data-state', '1');
+					$("#single").hide();
+					$("#goback").hide();
+					$("#exit").hide();
+					$("#home").show();			
+				}
+				
+				if(dstate == '1'){
+					exitAppPopup();
+				}
+			}
+			
+			// Exit
+			function exitAppPopup(){
+				navigator.notification.confirm(
+					'Tutup aplikasi?'
+					, function(button){
+						  if(button == 2) {
+							  navigator.app.exitApp();
+						  }
+					  }
+					, 'Keluar'
+					, 'Batal,Ya'
+				);  
+				return false;
+			}
+
+			$('body').hammer().on("tap", ".backbtn", function(event){
+				
+				$("html, body").animate({ scrollTop: 0 }, "fast");
+				
+				$("#single").hide();
+				$("#goback").hide();
+				$("#exit").hide();
+				$("#home").show();
+				
+				$('body').attr('data-state', '1');
+				
+			});
+		</script>
+</body>
+</html>
