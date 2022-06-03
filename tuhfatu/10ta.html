@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tuhfatul athfal</title>
+
+<script>
+
+	function onLoad(){
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+	function onDeviceReady(){
+		// Page
+		localStorage.pageID = 1;
+		
+		// Back Button
+		document.addEventListener("backbutton", onBackKeyDown, false);
+	}
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style3 {font-size: 24px}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="onLoad()" data-state="1" >
+
+<div id="header">
+ <div align="left"><a href="index.html"><img src="images/icon-home.png" width="40" height="40" class="imgfloat" /> </a></div>
+<div id="headbox">
+ <h2 class="style1">TUHFATUL ATHFAL</h2>
+</div>
+</div>
+
+<div id="home">
+
+<ul id="homemenu">
+
+ 
+<div align="center" style="padding-left:4px; padding-right:4px; color:#000">
+ 
+ <center>
+ <br>
+ <div align="center" style="padding-left:4px; padding-right:4px; color:#000">
+   <h3 class="style3">خاَتِمَةٌ</h3>
+   <p>&nbsp;</p>
+   <h3>وَتَــمَّ ذَا النَّـظْمُ بِحَـمْدِ اللَّـــهِ</h3>
+   <h3>عَـلَـى تَمَامِـهِ بِـلاَ تَــنَاهِـى</h3>
+   <p>Dan telah khatam sempurna, nadhom ini, dengan memuji Allah (dengan hamdalah), atas sempurna selesainya nadhom dengan pujian kepada-Nya tanpa ada batas.</p>
+   <p>&nbsp;</p>
+   <h3>أَبْـيَاتُـهُ نَـدٌّ بَـداَ لِـذِى النُّـهَى</h3>
+   <h3>تَارِيخُهُ بُشْـرَى لِمَـنْ يُـتْقِـنُـهَا</h3>
+   <p>Jumlah baitnya adalah“نَـدٌّ بَـداَ” (tumbuhan yang harum/tumbuhan pohon gaharu) kata ini jika diterjemahkan menurut perhitungan jummal (http://ar.wikipedia.org/wiki/حساب_الجمل) menunjukkan angka 61 yaitu: ن = 50 + د = 4 + ب = 2 + د = 4 + ا = 1 = 61<br>
+    bagi orang yang memiliki akalyaitu orang pandai , tanggal penyelesaiinya adalah “بُشْـرَى لِمَـنْ يُـتْقِـنُـهَا” (kabar baik bagi orang yang menguasai nadhom tersebut{nadhom tuhfatul athfal ini}), jika dilakukan perhitungan yang serupa, kalimat ini menghasilkan angka: 1198 , yaitu nadhom ini selesai dikarang oleh pengarang kitab ini di tahun 1198 H.</p>
+   <p>&nbsp;</p>
+   <h3>ثُـمَّ الصَّـلاَةُ وَالسَّــلاَمُ أَبَـــداَ</h3>
+   <h3>عَلـى خِـتَامِ الأَنْبِـيَاءِ أَحْـمَـدَا</h3>
+   <p>Lalu sholawat dan salam selamanya, atas penutup para nabi yaitu Ahmad, yang terpuji semua tentangnya, Nabi Muhammad SAW.</p>
+   <p>&nbsp;</p>
+   <h3>وَالآلِ وَالصَّــحْبِ وَكُـلِّ تَـابِـعِ</h3>
+   <h3>وَكُــلِّ قَـارِئٍ وكُـلِّ سَــامِـعِ</h3>
+   <p>Dan juga para keluarganya, dan para sahabat-sahabatnya, serta para pengikutnya, dan juga bagi setiap orang yang membacakitab ini, dan juga setiap orang yang mendengar kitab ini.</p>
+   <p>&nbsp;</p>
+   <h3>وَصَلَّى الله عَلٰى سَيِّدِنَا وَشَفِيْعِنَا النَّبِيِّ الأُمِّيِّ مُحَمَّدٍ وَعلٰى اٰۤلِه وَصَحْبِهِ وَسَلَّمَ<br>
+     تَسْلِيْماً كَثِيراً مُباَرَكاً عَدَدَ مَا كاَنَ وَمَايَكُوْنُ اِلٰى يَوْمِ الدِّيْنِ ۛ<br>
+     سُبْحاَنَ رَبِّكَ رَبِّ العِزَّةِ عَمَّا يَصِفُون<br>
+     وَسَلامٌ عَلٰى الْمُرْسَلِيْنَ وَالْحَمْدُ<br>
+     للهِ رَبِّ الْعاَلَمِيْنَ<br>
+     اۤمِيْنَ</h3>
+   <hr color="#006600">
+   <!--** isi content ** -->
+</div>
+</div>
+ </div>
+ 
+
+<div id="single" style="display:none;">
+
+</div>
+     
+       
+<div id="goback" style="display:none;" ><div class="navigasi"><img src="images/icon-home.png" /></div></div>
+
+
+
+<script>
+
+	$('#homemenu li').click(function(){
+		var hal = $(this).attr('data-hal');
+		
+		$.ajax({url: hal,
+			success: function(data){
+				$("#home").hide();
+				$("#isi").html(data);
+				$("#single").show();
+				$("#goback").show();
+				$("#exit").show();
+				$('body').attr('data-state', '2');
+			}
+		});
+	});
+	
+	$('#goback').click(function(){
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+	});
+	
+	// Back Button
+	function onBackKeyDown(){
+		var dstate = $('body').attr('data-state');
+				
+		if(dstate == '2'){
+			$('body').attr('data-state', '1');
+			$("#single").hide();
+			$("#goback").hide();
+			$("#exit").hide();
+			$("#home").show();			
+		}
+		
+		if(dstate == '1'){
+			exitAppPopup();
+		}
+    }
+	
+	// Exit
+	function exitAppPopup(){
+        navigator.notification.confirm(
+            'Tutup aplikasi?'
+            , function(button){
+                  if(button == 2) {
+                      navigator.app.exitApp();
+                  }
+              }
+            , 'Keluar'
+            , 'Batal,Ya'
+        );  
+        return false;
+    }
+
+	$('body').hammer().on("tap", ".backbtn", function(event){
+		
+		$("html, body").animate({ scrollTop: 0 }, "fast");
+		
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+		
+		$('body').attr('data-state', '1');
+		
+	});
+
+</script>    
+</body>
+</html>
+	

@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>tuhfatul athfal</title>
+
+<script>
+
+	function onLoad(){
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+	
+	function onDeviceReady(){
+		// Page
+		localStorage.pageID = 1;
+		
+		// Back Button
+		document.addEventListener("backbutton", onBackKeyDown, false);
+	}
+</script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style3 {font-size: 24px}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="onLoad()" data-state="1" >
+
+<div id="header">
+ <div align="left"><a href="index.html"><img src="images/icon-home.png" width="40" height="40" class="imgfloat" /> </a></div>
+<div id="headbox">
+ <h2 class="style1">TUHFATUL ATHFAL</h2>
+</div>
+</div>
+
+<div id="home">
+
+<ul id="homemenu">
+
+ 
+<div align="center" style="padding-left:4px; padding-right:4px; color:#000">
+ 
+ <center>
+ <br>
+ <div align="center" style="padding-left:4px; padding-right:4px; color:#000">
+   <h3 class="style3">أَقْسَامُ الْمَدِّ</h3>
+   <h3>BAB PEMBAGIAN MAD</h3>
+   <p>&nbsp;</p>
+   <h3>وَالمـَدُّ أَصْلِـىُّ وَ فَـرْعِــىٌّ لَـهُ</h3>
+   <h3>وَسَــمِّ أَوَّلاً طَبِيـعِـيّاً وَهُـــو</h3>
+   <p>Dan mad itu ada ashliy (asli) dan far'iy (cabang), mad jenis yang pertama (mad ashliy) disebut juga mad thobi'iy.<br>
+    Panjang bacaan mad adalah satu alif/dua harakat.</p>
+   <p>&nbsp;</p>
+   <h3>مَـالاَ تَوَقُّـفٌ لَـهُ عَـلـى سَـبَبْ</h3>
+   <h3>وَلابِـدُونِهِ الحُـرُوفُ تُجْـتَـلَـبْ</h3>
+   <p>Mad thobi'iy tidak bergantung pada sebab (misalnya sebab waqaf dan sukun/mati), dan juga tidak bergantung pada huruf lain </p>
+   <p>&nbsp;</p>
+   <h3>بلْ أَىُّ حَرْفٍ غَيْرُ هَمْزٍ أَوْ سُـكُونْ</h3>
+   <h3>جَا بَعْـدَ مَـدٍّ فَالطَّبِــيِعىَّ يَكُـونْ</h3>
+   <p>Akan tetapi setiap huruf hijaiyah selain hamzah atau sukun, yang datang atau berada setelah buruf mad disebut mad thobi'i. <br>
+    Mad ashliy juga disebut dengan mad thobi'iy.</p>
+   <p>&nbsp;</p>
+   <h3>وَالآخَرُ الْفَرْعِـىُّ مَوْقُـوفٌ عَلـي</h3>
+   <h3>سَـبَبْ كَهَمْزٍ أَوْ سُكُونٍ مُسْـجَـلاً</h3>
+   <p>Sedangkan mad yang selainnya, disebut mad far'iy, yang waqaf atas sebab hamzah atau sukun, secara mutlak (baik di tengah maupun di akhir kata)</p>
+   <p>&nbsp;</p>
+   <h3>حُـرُوفُــهُ ثَـــلاَثَـةٌ فَعِـيـهَا</h3>
+   <h3>مِنْ لَفْـظِ وَاىٍ وَهْىَ فى نُوحِـيـهَا</h3>
+   <p>Huruf mad far'iyada 3, yang terkumpul dalam lafadz وَاىٍyaituwauw, alif, dan ya'.</p>
+   <p>&nbsp;</p>
+   <h3>وَالكَسْرُ قَبْـلَ الْيَا وَقَبْلَ الْواوِ ضَـمْ</h3>
+   <h3>شَـرْطٌ وَفَـتْحٌ قَبْـلَ أَلفٍ يُلْتَــزَمْ</h3>
+   <p>Dan (syarat dibaca mad adalah)kasroh sebelum ya', dan dhommah sebelum wawu, sebagai syarat dibaca mad, serta fathah sebelum alif, wajib juga di baca mad.<br>
+     Contoh:<br>
+     1. dhommah sebelum wawu: يَقُوْلُ<br>
+     2. kasroh sebelum ya': قِيْلَ<br>
+    3. fathah sebelum alif: قَالَ</p>
+   <p>&nbsp;</p>
+   <h3>وَاللِّـينُ مِنْـهَا الْيَا وَوَاوٌ سَـكَـنَا</h3>
+   <h3>إِنِ انْفِــتَاحٌ قَبْـلَ كُـلٍّ أُعْـلِـنَا</h3>
+   <p>Dan disebut dengan mad layyin, jika ada ya'atau wawu mati/sukun, namun ketika itu huruf sebelumnya berharokat/berbaris fathah.</p>
+   <hr color="#006600">
+   <!--** isi content ** -->
+</div>
+</div>
+ </div>
+ 
+
+<div id="single" style="display:none;">
+
+</div>
+     
+       
+<div id="goback" style="display:none;" ><div class="navigasi"><img src="images/icon-home.png" /></div></div>
+
+
+
+<script>
+
+	$('#homemenu li').click(function(){
+		var hal = $(this).attr('data-hal');
+		
+		$.ajax({url: hal,
+			success: function(data){
+				$("#home").hide();
+				$("#isi").html(data);
+				$("#single").show();
+				$("#goback").show();
+				$("#exit").show();
+				$('body').attr('data-state', '2');
+			}
+		});
+	});
+	
+	$('#goback').click(function(){
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+	});
+	
+	// Back Button
+	function onBackKeyDown(){
+		var dstate = $('body').attr('data-state');
+				
+		if(dstate == '2'){
+			$('body').attr('data-state', '1');
+			$("#single").hide();
+			$("#goback").hide();
+			$("#exit").hide();
+			$("#home").show();			
+		}
+		
+		if(dstate == '1'){
+			exitAppPopup();
+		}
+    }
+	
+	// Exit
+	function exitAppPopup(){
+        navigator.notification.confirm(
+            'Tutup aplikasi?'
+            , function(button){
+                  if(button == 2) {
+                      navigator.app.exitApp();
+                  }
+              }
+            , 'Keluar'
+            , 'Batal,Ya'
+        );  
+        return false;
+    }
+
+	$('body').hammer().on("tap", ".backbtn", function(event){
+		
+		$("html, body").animate({ scrollTop: 0 }, "fast");
+		
+		$("#single").hide();
+		$("#goback").hide();
+		$("#exit").hide();
+		$("#home").show();
+		
+		$('body').attr('data-state', '1');
+		
+	});
+
+</script>    
+</body>
+</html>
+	
