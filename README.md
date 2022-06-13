@@ -79,6 +79,7 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 - [Tuhfatul Athfal](https://wahyu9kdl.github.io/islami/tuhfatu)
 - [Uqudulujain](https://wahyu9kdl.github.io/islami/uqudulujain)
 - [Washoya](https://wahyu9kdl.github.io/islami/waso)
+- [Kumpulan Sholawat Lengkap](https://wahyu9kdl.github.io/islami/sholawat/)
 - [LICENSE](https://wahyu9kdl.github.io/islami/LICENSE)
 - [FAQ](https://wahyu9kdl.github.io/faq.html)
 
