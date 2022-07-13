@@ -1,0 +1,251 @@
+html {
+    font-family: 'Lato', sans-serif;
+    background-color: hsl(180, 70%, 25%);
+    direction: rtl;
+    color: hsl(0, 0%, 90%);
+    letter-spacing: 0.1em;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.sharethis-inline-share-buttons{
+    margin: auto 10%;
+}
+#title {
+    color: rgb(4, 148, 148);
+    position: fixed;
+    background-color: hsl(180, 70%, 15%);
+    padding: 0.5em 0.9em;
+    width: 100%;
+    margin: 0em;
+    z-index: 1;
+}
+
+#title h1{
+    font-size: smaller;
+}
+
+h3, h5, h4, p {
+    text-align: center;
+    margin: 0.1em 1em;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+h4 {
+    color: rgb(4, 148, 148);
+}
+
+p {
+    font-style: italic;
+    font-size: smaller;
+    margin-top: 2em;
+    color: yellow;
+}
+
+h6 {
+    margin: 0 1em;
+    font-size: 150%;
+    text-align: justify;
+}
+
+br {
+    margin: 1em;
+}
+
+hr {
+    width: 80%;
+    text-align: center;
+    margin: 2em auto;
+    overflow: visible;
+    color: rgb(4, 148, 148);
+    /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double;
+}
+
+#myNav button {
+    border-radius: 20px;
+    border: none;
+    display: inline-block;
+    width: 90%;
+    background-color: hsl(180, 70%, 25%);
+    text-shadow: 2px 2px 5px black;
+    cursor: pointer;
+    text-align: center;
+    margin: 0.5em;
+    padding: 0em;
+}
+
+#myNav button a{
+    padding: 0.2em;
+    color: hsl(0, 0%, 80%);
+}
+.overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    overflow-y: scroll;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    top: 5.5em;
+}
+
+#myNav button:active {
+    transform: translateY(4px);
+    background-color: hsl(60, 100%, 90%);
+}
+
+.overlay a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:focus {
+    color: hsl(0, 0%, 90%);
+}
+
+.overlay .closebtn {
+    position: absolute;
+    right: 0.5em;
+    top: 0.08em;
+    margin-bottom: 1em;
+    font-size: 3rem;
+}
+
+.btngrp {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.btngrp button {
+    color: rgb(4, 148, 148);
+    background-color: hsl(180, 70%, 15%);
+    cursor: pointer;
+    margin: 0.5em auto;
+    padding: 0em;
+    border-radius: 5px;
+}
+
+.btngrp button:active {
+    transform: translateY(4px);
+    background-color: yellow;
+}
+
+.btngrp button a {
+    text-decoration: none;
+    padding: 0.5em;
+    font-size: x-large;
+    margin: 0.5em auto;
+}
+
+.counter h1 a {
+    font-size: 150%;
+    color: hsl(180, 70%, 25%);
+    text-shadow: 2px 2px 5px black;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.counter {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.counter button {
+    border-radius: 20px;
+    border: none;
+    display: inline-block;
+    width: 90%;
+    background-color: hsl(0, 0%, 85%);
+    cursor: pointer;
+    text-align: center;
+    margin: 1em;
+    padding: 0em;
+    box-shadow: 0px 8px 15px hsl(46, 100%, 60%);
+    transition: all 0.3s ease 0s;
+}
+
+.counter button:active {
+    box-shadow: 0 5px hsl(0, 0%, 0%, 0.4);
+    transform: translateY(4px);
+}
+
+#margin {
+    height: 100px;
+}
+
+button:focus {outline:0;}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 90%);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: hsl(56, 100%, 50%);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(46, 100%, 49%);
+}
+
+  .progress-container {
+    width: 100%;
+    height: 0.2em;
+    position: fixed;
+    background-color: hsl(180, 71%, 20%);
+    z-index: 1;
+  }
+  
+  .progress-bar {
+    height: 0.2em;
+    background: yellow;
+    width: 0%;
+  }
