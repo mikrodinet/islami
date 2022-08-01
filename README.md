@@ -52,6 +52,7 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 
 ![kitab.png](https://wahyu9kdl.github.io/islami/kitab.png)
 
+### [KUMPULAN KITAB KUNING LENGKAP](https://wahyu9kdl.github.io/islami/index.html)
 - [Adabul Alim Wal Muta'alim](https://wahyu9kdl.github.io/islami/ada )
 - [Al-Muwatta Imam Malik](https://wahyu9kdl.github.io/islami/muwatta)
 - [Al-Hikam Ibnu Athaillah](https://wahyu9kdl.github.io/islami/alhikam)
@@ -87,10 +88,10 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 
 # Version
 Versi Tampilan Home Page Kitab Kuning dan Terjemahan
-- [Version I](/index.html) non AMP - [VIEW](https://wahyu9kdl.github.io/islami//index.html)
-- [Version II](/v1.html) non AMP - [VIEW](https://wahyu9kdl.github.io/islami//v1.html)
-- [Version III](/amp.html) AMP 1⚡- [VIEW](/amp.html)
-- [Version IV](/versi-amp.html) AMP ⚡- [VIEW](https://wahyu9kdl.github.io/islami//versi-amp.html)
+- [Version I](/index.html) non AMP - [VIEW](https://wahyu9kdl.github.io/islami/index.html)
+- [Version II](/v1.html) non AMP - [VIEW](https://wahyu9kdl.github.io/islami/v1.html)
+- [Version III](/amp.html) AMP 1⚡- [VIEW](https://wahyu9kdl.github.io/islami/islami/amp.html)
+- [Version IV](/versi-amp.html) AMP ⚡- [VIEW](https://wahyu9kdl.github.io/islami/versi-amp.html)
 
 ## INSTAL
 
