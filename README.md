@@ -55,7 +55,7 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 - [Adabul Alim Wal Muta'alim](https://wahyu9kdl.github.io/islami/ada )
 - [Al-Muwatta Imam Malik](https://wahyu9kdl.github.io/islami/muwatta)
 - [Al-Hikam Ibnu Athaillah](https://wahyu9kdl.github.io/islami/alhikam)
-- [Alfiyah Ibnu Malik](https://wahyu9kdl.github.io/islami/alfiyah)
+- [Alfiyah Ibnu Malik](https://wahyu9kdl.github.io/islami/alfiyah/alfiyah.html)
 - [Amtsilah Tashrif](https://wahyu9kdl.github.io/islami/amsilah)
 - [Aqidatul Awam](https://wahyu9kdl.github.io/islami/aqidatul)
 - [Arbain Nawawi](https://wahyu9kdl.github.io/islami/arbain)
@@ -70,7 +70,7 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 - [Nashoihul Ibad](https://wahyu9kdl.github.io/islami/nashoihul)
 - [Qurrotul Uyun](https://wahyu9kdl.github.io/islami/uyun)
 - [Riyadhus Shalihin](https://wahyu9kdl.github.io/islami/riyadhus)
-- [Safinatun Najah](https://wahyu9kdl.github.io/islami/safinah)
+- [Safinatun Najah](https://wahyu9kdl.github.io/islami/safinah/safinah.html)
 - [Shahih Muslim](https://wahyu9kdl.github.io/islami/muslim)
 - [Shahih Bukhari](https://wahyu9kdl.github.io/islami/bukhari)
 - [Sirrul Asror](https://wahyu9kdl.github.io/islami/sirul)
@@ -85,8 +85,28 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 - [LICENSE](https://wahyu9kdl.github.io/islami/LICENSE)
 - [FAQ](https://wahyu9kdl.github.io/faq.html)
 
+# Version
+Versi Tampilan Home Page Kitab Kuning dan Terjemahan
+- [Version I](/index.html) non AMP - [VIEW](https://wahyu9kdl.github.io/islami//index.html)
+- [Version II](/v1.html) non AMP - [VIEW](https://wahyu9kdl.github.io/islami//v1.html)
+- [Version III](/amp.html) AMP 1⚡- [VIEW](/amp.html)
+- [Version IV](/versi-amp.html) AMP ⚡- [VIEW](https://wahyu9kdl.github.io/islami//versi-amp.html)
+
+## INSTAL
+
+HTTP/HTTPS + git
+```
+https://github.com/wahyu9kdl/islami.git
+```
+GITHUB CLI
+```
+gh repo clone wahyu9kdl/islami
+```
+DOWNLOAD 
+ [⬇️DOWNLOAD ZIP](https://github.com/wahyu9kdl/islami/archive/refs/heads/main.zip)
+
 # Redaksi
 
-- [wahyu9kdl](https://wahyu9kdl.github.io )
+- [wahyu9kdl](https://wahyu9kdl.github.io)
 - [Redaksi Alhikmah](https://www.alhikmah.my.id)
-
+- [AL HIKMAH](https://wahyu9kdl.github.io/AL-HIKMAH)
