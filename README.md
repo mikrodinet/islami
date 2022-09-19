@@ -1,5 +1,7 @@
 # ISLAMI 
 
+[Get Started](https://wahyu9kdl.github.io/islami/index.html)
+
 بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
 
 
@@ -50,7 +52,7 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 - Clifford Geertz seorang ahli antropologi dari Amerika Serikat dalam bukunya yang terkenal berjudul "Abangan, Santri, Priyayi Dalam Masyarakat Jawa" (judul aslinya The Religion of Java)[1] memuat sekelumit ceria tentang kitab kuning. Ada pula buku karangan peneliti Belanda Martin van Bruinessen yang berjudul "Kitab Kuning, Pesantren, dan Tarekat",[2] yang membahas sejarah kitab kuning dan pendidikan Islam tradisional di Indonesia.
 # Daftar Isi Kitab Kuning dan Terjemahan
 
-![kitab.png](https://wahyu9kdl.github.io/islami/kitab.png)
+![kitab.png](kitab.png)
 
 ### [KUMPULAN KITAB KUNING LENGKAP](https://wahyu9kdl.github.io/islami/index.html)
 - [Adabul Alim Wal Muta'alim](https://wahyu9kdl.github.io/islami/ada )
@@ -85,7 +87,7 @@ Kitab kuning selalu identik dengan dunia pesantren Nusantara. Kitab kuning yang 
 - [Arabic Keyboard](https://wahyu9kdl.github.io/islami/arabic/index.html)
 - [LICENSE](https://wahyu9kdl.github.io/islami/LICENSE)
 - [FAQ](https://wahyu9kdl.github.io/faq.html)
-
+- [Download Aplikasi](https://wahyu9kdl.github.io/islami/app/ngologat.apk)
 # Version
 Versi Tampilan Home Page Kitab Kuning dan Terjemahan
 - [Version I](/index.html) non AMP - [VIEW](https://wahyu9kdl.github.io/islami/index.html)
@@ -103,11 +105,16 @@ GITHUB CLI
 ```
 gh repo clone wahyu9kdl/islami
 ```
-DOWNLOAD 
- [⬇️DOWNLOAD ZIP](https://github.com/wahyu9kdl/islami/archive/refs/heads/main.zip)
+### DOWNLOAD 
+ 
+[⬇️ DOWNLOAD ZIP](https://github.com/wahyu9kdl/islami/archive/refs/heads/main.zip)
+ 
+[⬇️ DOWNLOAD APK](https://wahyu9kdl.github.io/islami/app/ngologat.apk)
 
 # Redaksi
 
 - [wahyu9kdl](https://wahyu9kdl.github.io)
 - [Redaksi Alhikmah](https://www.alhikmah.my.id)
 - [AL HIKMAH](https://wahyu9kdl.github.io/AL-HIKMAH)
+- [AWDEV](https://www.awdev.my.id)
+- [AWDEV CORPORATION](https://www.awdev.eu.org)
